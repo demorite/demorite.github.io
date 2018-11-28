@@ -1,0 +1,28 @@
+{
+  "name": "demorite.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demorite/demorite.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demorite/demorite.github.io/issues"
+  },
+  "homepage": "https://github.com/demorite/demorite.github.io#readme",
+  "dependencies": {
+    "@bower_components/jquery": "jquery/jquery-dist#>=1.8",
+    "@bower_components/normalize.css": "necolas/normalize.css#^8.0.1",
+    "@bower_components/semantic": "Semantic-Org/Semantic-UI#^2.4.1"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
+}
