@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
 		<title>Title</title>
-		<link rel="stylesheet" href="node_modules/@bower_components/normalize.css/normalize.css">
-		<link rel="stylesheet" href="node_modules/@bower_components/semantic/dist/semantic.min.css">
-		<link rel="stylesheet" href="css/style.scss">
-
+		<link
+			rel="stylesheet"
+			href="node_modules/@bower_components/normalize.css/normalize.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="node_modules/@bower_components/semantic/dist/semantic.min.css"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<header class="nav">
-			<img src="https://avatars0.githubusercontent.com/u/999139" alt="avatar" class="ui image responsive">
-			<h1 class="username">Demorite</h1>
+		<header class="ui menu">
+			<div class="item brand">
+				<img
+					src="https://avatars0.githubusercontent.com/u/999139"
+					alt="avatar"
+					class="ui image mini"
+				/>
+			</div>
+			<div class="item"><h1 class="username">Demorite</h1></div>
 		</header>
-		<div class="container">
+		<div class="ui container">
 			<section>
-				<h2>Repositories</h2>
+				<h2 class="ui header">Repositories</h2>
+
+				<div class="ui dimmable">
+					<div class="ui link list bulleted" id="user_repos">
+						<div class="ui dimmer inverted">
+							<div class="ui loader mini"></div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
 		<script src="node_modules/@bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="node_modules/@bower_components/semantic/dist/semantic.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
