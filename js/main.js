@@ -1,4 +1,5 @@
 const user_repos = $("#user_repos");
+const status = $("#status");
 
 function repos_url(user, page = 1) {
 	return `https://api.github.com/users/${user}/repos?page=${page}`;
@@ -19,7 +20,6 @@ function fetchUserRepos(user, page = 1) {
 	start_loading();
 	$.get(url, function(repos) {
 		if (!repos) return false;
-		console.log(repos);
 		for (let repo of repos) {
 			const item = $(
 				`<a class="ui item" href="${repo.html_url}" target="_blank">${
@@ -33,6 +33,19 @@ function fetchUserRepos(user, page = 1) {
 	});
 }
 
+function checkLastStatus() {
+	const url =
+		"https://api.github.com/repos/demorite/demorite.github.io/pages/builds/latest";
+	$.get(url, function(response) {
+		status.html(
+			response.status +
+				" : " +
+				moment(response.updated_at).format("DD/MM/YYYY hh:mm")
+		);
+	});
+}
+
 window.addEventListener("load", () => {
+	checkLastStatus();
 	fetchUserRepos("demorite");
 });
