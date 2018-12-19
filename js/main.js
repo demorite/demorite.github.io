@@ -15,6 +15,7 @@ function stop_loading(selector) {
 
 function fetchUserRepos(user, page = 1) {
 	const url = repos_url(user, page);
+	user_repos.html("");
 	start_loading();
 	$.get(url, function(repos) {
 		if (!repos) return false;
