@@ -18,9 +18,6 @@
 	},
 	"homepage": "https://github.com/demorite/demorite.github.io#readme",
 	"dependencies": {
-		"@bower_components/jquery": "jquery/jquery-dist#>=1.8",
-		"@bower_components/normalize.css": "necolas/normalize.css#^8.0.1",
-		"@bower_components/semantic": "Semantic-Org/Semantic-UI#^2.4.1",
 		"prettier": "^1.15.2"
 	}
 }
