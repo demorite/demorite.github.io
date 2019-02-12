@@ -2,7 +2,7 @@ const user_repos = $("#user_repos");
 const status = $("#status");
 
 function repos_url(user, page = 1) {
-	return `https://api.github.com/users/${user}/repos?page=${page}`;
+	return `https://api.github.com/users/${user}/repos?sort=updated&page=${page}`;
 }
 
 function start_loading(selector) {
