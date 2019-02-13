@@ -24,7 +24,7 @@ function fetchUserRepos(user, page = 1) {
 			const item = $(
 				`<a class="ui item" href="${repo.html_url}" target="_blank">${
 					repo.name
-				}</a>`
+				}<small> | Modifié le : ${moment(repo.updated_at).format('DD MMMM YYYY')}</small></a>`
 			);
 			user_repos.append(item);
 		}
